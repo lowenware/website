@@ -1,21 +1,27 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
-/node_modules
-/_public
+node_modules
 
-# next.js
-/.next/
+# SvelteKit
+.svelte-kit
+build
 
-# production
-/out/
+# env
+.env
+.env.*
+!.env.example
+
+# legacy (inside old/)
+old/node_modules
+old/.next
+old/out
 
 # misc
 .DS_Store
 .vscode
-
-# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-yarn.lock
+
+old
+
+.plans
