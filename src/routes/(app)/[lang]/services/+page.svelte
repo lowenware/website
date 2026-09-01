@@ -67,7 +67,13 @@
   @import '$lib/ui/template/home-section.css';
 
   .page {
-    padding: 4rem 0 0;
+    padding: 2rem 0 0;
+  }
+
+  @media (min-width: 768px) {
+    .page {
+      padding: 4rem 0 0;
+    }
   }
 
   .container {
@@ -118,8 +124,14 @@
 
   .work-section {
     background: var(--color-surface-lighter);
-    padding: 6rem 0;
+    padding: 3.5rem 0;
     border-top: none;
+  }
+
+  @media (min-width: 768px) {
+    .work-section {
+      padding: 6rem 0;
+    }
   }
 
   .work-header {

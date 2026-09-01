@@ -165,14 +165,29 @@
   .checkbox-field label {
     font-weight: 400;
     line-height: 1.5;
+    padding: 0.5rem 0;
+    cursor: pointer;
   }
 
   .checkbox-field input[type='checkbox'] {
-    margin-top: 0.2rem;
-    width: 1rem;
-    height: 1rem;
+    margin-top: 0.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    min-width: 1.25rem;
     flex-shrink: 0;
     accent-color: var(--color-blue-brand);
+    cursor: pointer;
+  }
+
+  .inquiry-form :global(.btn) {
+    width: 100%;
+  }
+
+  @media (min-width: 480px) {
+    .inquiry-form :global(.btn) {
+      width: auto;
+      align-self: flex-start;
+    }
   }
 
   .textarea {

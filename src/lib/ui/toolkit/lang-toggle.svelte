@@ -31,11 +31,23 @@
   }
 
   .lang-current {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    padding: 0.25rem 0.375rem;
     font-weight: 700;
     color: var(--color-blue-brand);
   }
 
   .lang-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    padding: 0.25rem 0.375rem;
     color: var(--color-grey-600);
     text-decoration: none;
   }

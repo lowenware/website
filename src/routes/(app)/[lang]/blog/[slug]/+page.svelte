@@ -105,13 +105,12 @@
   .post-page {
     max-width: 48rem;
     margin: 0 auto;
-    padding: 3rem 1rem;
+    padding: 2rem max(1rem, env(safe-area-inset-right)) 2rem max(1rem, env(safe-area-inset-left));
   }
 
   @media (min-width: 768px) {
     .post-page {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding: 3rem 2rem;
     }
   }
 
@@ -125,7 +124,7 @@
 
   .post-title {
     margin-bottom: 1rem;
-    font-size: 1.875rem;
+    font-size: clamp(1.5rem, 4vw, 1.875rem);
     line-height: 1.2;
     color: #fff;
   }

@@ -31,6 +31,15 @@
     mq.addEventListener('change', onChange);
     return () => mq.removeEventListener('change', onChange);
   });
+
+  $effect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  });
 </script>
 
 <svelte:window onkeydown={(e) => e.key === 'Escape' && close()} />
@@ -68,6 +77,8 @@
   </div>
 
   {#if open}
+    <!-- svelte-ignore a11y_click_events_have_key_events a11y_no_static_element_interactions -->
+    <div class="mobile-nav-backdrop" onclick={close} aria-hidden="true"></div>
     <nav id="mobile-menu" aria-label="Mobile" class="mobile-nav">
       {#each navItems as item (item.href)}
         <a href={item.href} class="mobile-link" onclick={close}>{$_(item.label)}</a>
@@ -84,6 +95,7 @@
     background: var(--color-dark);
     backdrop-filter: blur(8px);
     opacity: 0.9;
+    padding-top: env(safe-area-inset-top, 0px);
   }
 
   .header-inner {
@@ -93,7 +105,8 @@
     gap: 1rem;
     max-width: var(--container-8xl);
     margin: 0 auto;
-    padding: 0.875rem 1rem;
+    padding: 0.875rem max(1rem, env(safe-area-inset-right)) 0.875rem
+      max(1rem, env(safe-area-inset-left));
   }
 
   @media (min-width: 768px) {
@@ -130,9 +143,15 @@
   }
 
   .logo-img {
-    height: 50px;
+    height: 40px;
     width: auto;
     filter: brightness(0) invert(1);
+  }
+
+  @media (min-width: 480px) {
+    .logo-img {
+      height: 50px;
+    }
   }
 
   .logo-link:hover .logo-img {
@@ -182,7 +201,11 @@
   .menu-toggle {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 5px;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
     padding: 0.5rem;
     background: none;
     border: none;
@@ -217,11 +240,27 @@
     transform: translateY(-7px) rotate(-45deg);
   }
 
+  .mobile-nav-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    background: rgba(10, 11, 13, 0.6);
+  }
+
   .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 45;
     display: flex;
     flex-direction: column;
-    border-top: 1px solid var(--color-surface-border);
-    padding: 0.5rem 1rem 1rem;
+    width: min(18rem, 85vw);
+    padding: calc(4.5rem + env(safe-area-inset-top, 0px)) 1rem 1.5rem;
+    background: var(--color-dark);
+    border-left: 1px solid var(--color-surface-border);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   @media (min-width: 768px) {
@@ -231,7 +270,10 @@
   }
 
   .mobile-link {
-    padding: 0.75rem 0;
+    padding: 0.875rem 0;
+    min-height: 2.75rem;
+    display: flex;
+    align-items: center;
     font-size: 0.9375rem;
     color: var(--color-grey-600);
     text-decoration: none;

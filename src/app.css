@@ -51,12 +51,20 @@ select {
   font: inherit;
 }
 
+html {
+  overflow-x: clip;
+}
+
 html,
 body {
   font-family: var(--font-jura);
   color: var(--color-grey-600);
   background: var(--color-dark);
   min-height: 100%;
+}
+
+body {
+  overflow-x: clip;
 }
 
 a {
@@ -97,6 +105,9 @@ textarea:focus-visible {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  padding-left: max(0px, env(safe-area-inset-left));
+  padding-right: max(0px, env(safe-area-inset-right));
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .app-main {
@@ -106,13 +117,12 @@ textarea:focus-visible {
 .page-shell {
   max-width: var(--container-8xl);
   margin: 0 auto;
-  padding: 3rem 1rem;
+  padding: 2rem max(1rem, env(safe-area-inset-right)) 2rem max(1rem, env(safe-area-inset-left));
 }
 
 @media (min-width: 768px) {
   .page-shell {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 3rem 2rem;
   }
 }
 
@@ -140,8 +150,10 @@ textarea:focus-visible {
 .pagination {
   margin-top: 3rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.75rem 1rem;
 }
 
 .pagination-status {
@@ -206,6 +218,23 @@ textarea:focus-visible {
 
 .prose-invert {
   color: var(--color-grey-600);
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.prose pre,
+.prose code {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .prose pre {
@@ -283,6 +312,7 @@ textarea:focus-visible {
   background: var(--color-surface);
   color: #fff;
   padding: 0.75rem 1rem;
+  font-size: 1rem;
   outline: none;
   transition: border-color 0.2s;
 }

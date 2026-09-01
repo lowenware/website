@@ -128,7 +128,7 @@
     gap: 2rem;
     max-width: var(--container-8xl);
     margin: 0 auto;
-    padding: 3rem 1rem 2rem;
+    padding: 3rem max(1rem, env(safe-area-inset-right)) 2rem max(1rem, env(safe-area-inset-left));
   }
 
   @media (min-width: 768px) {
@@ -222,8 +222,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
-    height: 2rem;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
     color: #fff;
     transition: color 0.2s;
   }

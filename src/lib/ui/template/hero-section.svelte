@@ -49,7 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 75vh;
+    min-height: min(75vh, 640px);
     overflow: hidden;
     background: var(--color-dark);
   }
@@ -129,9 +129,15 @@
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
-    padding: 6rem 1.5rem 4rem;
+    padding: 4rem max(1rem, env(safe-area-inset-right)) 3rem max(1rem, env(safe-area-inset-left));
     text-align: center;
     width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .hero-content {
+      padding: 6rem 1.5rem 4rem;
+    }
   }
 
   .hero-inner {

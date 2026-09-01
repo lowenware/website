@@ -67,8 +67,16 @@
   .product-caption {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
     justify-content: space-between;
+  }
+
+  @media (max-width: 400px) {
+    .product-caption {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   .product-body {
