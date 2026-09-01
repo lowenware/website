@@ -46,11 +46,17 @@
 
   .technologies-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  @media (min-width: 480px) {
+    .technologies-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (min-width: 640px) {
@@ -87,7 +93,7 @@
   .technology-label {
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--color-grey-400);
+    color: var(--color-grey-500);
     text-align: center;
   }
 </style>

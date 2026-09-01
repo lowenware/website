@@ -46,8 +46,10 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 8rem;
+    min-height: 8rem;
     flex-direction: column;
+    padding: 0 max(1rem, env(safe-area-inset-right)) 0 max(1rem, env(safe-area-inset-left));
+    margin-bottom: 1.5rem;
   }
 
   .tagline-card {
@@ -57,8 +59,9 @@
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    width: 90%;
+    width: 100%;
     max-width: 48rem;
+    padding: 1.5rem 1rem;
     text-align: center;
     background: var(--color-dark);
     backdrop-filter: blur(8px);
@@ -71,6 +74,13 @@
       position: absolute;
       z-index: 10;
       top: -4rem;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    .tagline-card {
+      width: 90%;
+      padding: 0;
     }
   }
 
