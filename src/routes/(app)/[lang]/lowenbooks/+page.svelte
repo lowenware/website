@@ -11,9 +11,7 @@
   const { lang, product } = data;
   const canonical = absoluteUrl(`/${lang}/lowenbooks/`, origin);
   const alternates = buildAlternates('/lowenbooks/');
-  const imageSrc = $derived(
-    product.image ? getProductImageSrc('lowenbooks', product.image) : null
-  );
+  const imageSrc = $derived(product.image ? getProductImageSrc('lowenbooks', product.image) : null);
 </script>
 
 <SeoHead

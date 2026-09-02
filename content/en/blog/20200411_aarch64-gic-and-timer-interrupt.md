@@ -158,8 +158,8 @@ pub fn clear(interrupt: u32) {
 
 > For GIC driver I've also implemented methods to disable interrupt, set
 > priority and target core, however default settings are enough for start.
-> Full code of the driver can be found
-> [here](https://github.com/lowenware/leos-kernel/blob/d0d8eb8757b969f412bf0663727165589cbaf480/src/arch/aarch64/gic.rs).
+> Full code of the driver can be found in the
+> [GIC driver source](https://github.com/lowenware/leos-kernel/blob/d0d8eb8757b969f412bf0663727165589cbaf480/src/arch/aarch64/gic.rs).
 
 ## Interrupts handling
 
@@ -262,8 +262,8 @@ Table is aligned using linker script:
 And `.org` directives protect vectors from exceeding 128 bytes limit. Macro
 `EXCEPTION_VECTOR` expands the code of interrupt which saves registers to the
 stack and calls specific ISR function that implemented in Rust. Full code is
-available
-[here](https://github.com/lowenware/leos-kernel/blob/d0d8eb8757b969f412bf0663727165589cbaf480/src/arch/aarch64/exceptions.s).
+available in the
+[exception vector table source](https://github.com/lowenware/leos-kernel/blob/d0d8eb8757b969f412bf0663727165589cbaf480/src/arch/aarch64/exceptions.s).
 
 Address of the table has to be stored in `vbar_el1` register:
 

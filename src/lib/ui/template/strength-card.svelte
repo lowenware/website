@@ -6,7 +6,7 @@
     index: number;
   };
 
-  let { strength, index }: Props = $props();
+  let { strength, index: _index }: Props = $props();
 </script>
 
 <div class="strength-card">

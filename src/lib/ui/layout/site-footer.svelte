@@ -39,7 +39,7 @@
     { href: `/${lang}/about/`, label: 'nav.about' },
     { href: `/${lang}/blog/`, label: 'nav.insights' },
     { href: `/${lang}/contact/`, label: 'nav.contact' },
-    { href: `/${lang}/privacy/`, label: 'nav.privacy' },
+    { href: `/${lang}/privacy/`, label: 'nav.privacy' }
   ] as const);
 
   const productLinks = $derived([
@@ -57,7 +57,8 @@
       <p class="footer-label">{$_('contact.address')}</p>
       <address class="footer-address">
         {contact.street}<br />
-        {formattedZip} {contact.city}<br />
+        {formattedZip}
+        {contact.city}<br />
         {contact.country}
       </address>
       <dl class="footer-company-ids">

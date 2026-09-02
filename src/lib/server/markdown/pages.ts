@@ -6,7 +6,13 @@ import {
   TechnologyFrontmatterSchema,
   parseOrderPrefix
 } from '$lib/shared/markdown';
-import type { CaseStudy, HeroData, Service, Strength, Technology } from '$lib/shared/markdown/types';
+import type {
+  CaseStudy,
+  HeroData,
+  Service,
+  Strength,
+  Technology
+} from '$lib/shared/markdown/types';
 import type { Locale } from '$lib/shared/defaults';
 import { loadMarkdownFile, listMarkdownFiles } from './loader';
 

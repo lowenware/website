@@ -11,11 +11,9 @@
     product: ProductCard;
   };
 
-  let { lang, product }: Props = $props();
+  let { lang: _lang, product }: Props = $props();
 
-  const imageSrc = $derived(
-    product.image ? getProductImageSrc(product.slug, product.image) : null
-  );
+  const imageSrc = $derived(product.image ? getProductImageSrc(product.slug, product.image) : null);
 
   const primaryLabel = $derived(
     product.isPlaceholder ? $_('product.comingSoon') : $_('product.learnMore')
@@ -54,8 +52,6 @@
     overflow: hidden;
     height: 100%;
   }
-
-
 
   .product-image {
     height: 10rem;

@@ -9,8 +9,8 @@ comments: true
 ---
 
 Letos jsem navštívil dvě nedaleké akce pro herní vývojáře.
-[GamesGround](https://www.gamesground.de/) se konal v Berlíně od 14. do
-16. listopadu a [GDS](https://www.gdsession.com) v Praze 14. prosince. Účast na
+[GamesGround](https://www.gamesground.de/) se konal v Berlíně od 14. do 16.
+listopadu a [GDS](https://www.gdsession.com) v Praze 14. prosince. Účast na
 GDS se pro nás už stala příjemnou každoroční tradicí.
 
 Minulý rok se nesl hlavně ve znamení workshopů a setkání s přednášejícími.
