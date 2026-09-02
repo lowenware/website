@@ -11,13 +11,6 @@ const redirectLegacy: Handle = async ({ event, resolve }) => {
   return resolve(event);
 };
 
-const rootRedirect: Handle = async ({ event, resolve }) => {
-  if (event.url.pathname === '/') {
-    throw redirect(302, `/${defaultLanguage}/`);
-  }
-  return resolve(event);
-};
-
 const setHtmlLang: Handle = async ({ event, resolve }) => {
   const lang = (event.params.lang as Locale | undefined) ?? defaultLanguage;
   return resolve(event, {
@@ -28,4 +21,4 @@ const setHtmlLang: Handle = async ({ event, resolve }) => {
   });
 };
 
-export const handle = sequence(rootRedirect, redirectLegacy, setHtmlLang);
+export const handle = sequence(redirectLegacy, setHtmlLang);

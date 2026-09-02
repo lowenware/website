@@ -13,7 +13,7 @@ const config = {
       handleHttpError: 'warn',
       handleMissingId: 'warn',
       handleUnseenRoutes: 'warn',
-      entries: ['/en/', '/cs/', '/sitemap.xml']
+      entries: ['/', '/en/', '/cs/', '/sitemap.xml']
     }
   }
 };

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { supportedLanguages, type Locale } from '$lib/shared/defaults';
+  import { savePreferredLocale } from '$lib/shared/locale-preference';
   import { switchLocalePath } from '$lib/shared/paths';
 
   type Props = { lang: Locale };
@@ -13,7 +14,7 @@
     {#if code === lang}
       <span class="lang-current" aria-current="true">{code.toUpperCase()}</span>
     {:else}
-      <a class="lang-link" {href}>{code.toUpperCase()}</a>
+      <a class="lang-link" {href} onclick={() => savePreferredLocale(code)}>{code.toUpperCase()}</a>
     {/if}
     {#if code !== supportedLanguages[supportedLanguages.length - 1]}
       <span class="lang-separator" aria-hidden="true">|</span>
