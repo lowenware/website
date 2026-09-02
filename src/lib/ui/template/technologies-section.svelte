@@ -23,6 +23,7 @@
           {#if tech.icon}
             <img
               class="technology-icon"
+              class:rust-icon={tech.slug === 'rust'}
               src="/icons/{tech.icon}"
               alt=""
               width={tech.width ?? 48}
@@ -88,6 +89,10 @@
     height: 3rem;
     max-width: 100%;
     object-fit: contain;
+  }
+
+  .rust-icon {
+    filter: brightness(0) invert(1);
   }
 
   .technology-label {
