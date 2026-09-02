@@ -34,10 +34,11 @@
 
   $effect(() => {
     if (!open) return;
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    const root = document.documentElement;
+    const previousOverflow = root.style.overflow;
+    root.style.overflow = 'hidden';
     return () => {
-      document.body.style.overflow = previousOverflow;
+      root.style.overflow = previousOverflow;
     };
   });
 </script>
@@ -75,16 +76,16 @@
       </button>
     </div>
   </div>
-
-  {#if open}
-    <div class="mobile-nav-backdrop" onclick={close} aria-hidden="true"></div>
-    <nav id="mobile-menu" aria-label="Mobile" class="mobile-nav">
-      {#each navItems as item (item.href)}
-        <a href={item.href} class="mobile-link" onclick={close}>{$_(item.label)}</a>
-      {/each}
-    </nav>
-  {/if}
 </header>
+
+{#if open}
+  <div class="mobile-nav-backdrop" onclick={close} aria-hidden="true"></div>
+  <nav id="mobile-menu" aria-label="Mobile" class="mobile-nav">
+    {#each navItems as item (item.href)}
+      <a href={item.href} class="mobile-link" onclick={close}>{$_(item.label)}</a>
+    {/each}
+  </nav>
+{/if}
 
 <style>
   .site-header {
@@ -121,10 +122,13 @@
   }
 
   .header-side-left {
+    grid-column: 1;
     justify-content: flex-start;
   }
 
   .header-side-right {
+    grid-column: 3;
+    justify-self: end;
     justify-content: flex-end;
     gap: 0.75rem;
   }
@@ -170,6 +174,7 @@
   }
 
   .desktop-nav {
+    grid-column: 2;
     display: none;
     align-items: center;
     justify-content: center;
@@ -250,12 +255,12 @@
     position: fixed;
     top: 0;
     right: 0;
-    bottom: 0;
+    height: 100dvh;
     z-index: 45;
     display: flex;
     flex-direction: column;
     width: min(18rem, 85vw);
-    padding: calc(4.5rem + env(safe-area-inset-top, 0px)) 1rem 1.5rem;
+    padding: calc(3.75rem + env(safe-area-inset-top, 0px)) 1rem 1.5rem;
     background: var(--color-dark);
     border-left: 1px solid var(--color-surface-border);
     overflow-y: auto;
