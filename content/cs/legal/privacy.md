@@ -6,7 +6,7 @@ title: Prohlášení o ochraně osobních údajů
 
 Společnost Löwenware s.r.o. (dále jen „my“) se sídlem U Jezu 525/4, 460 01
 Liberec, Česko, provozuje webové stránky lowenware.com. Kontakt:
-inbox@lowenware.com.
+[inbox@lowenware.com](mailto:inbox@lowenware.com).
 
 ## Jaké údaje shromažďujeme
 
@@ -39,14 +39,16 @@ adrese my.lowenware.com a zpracovávány společností Löwenware s.r.o. Vaše o
 
 Zprávy s poptávkami uchováváme po dobu nezbytnou k vyřízení vašeho požadavku
 a k vedení záznamů o naší obchodní korespondenci. Chcete-li své údaje vymazat,
-kontaktujte nás na adrese inbox@lowenware.com.
+kontaktujte nás na adrese
+[inbox@lowenware.com](mailto:inbox@lowenware.com).
 
 ## Vaše práva
 
 Podle platných právních předpisů o ochraně osobních údajů (včetně GDPR) máte
 právo na přístup ke svým osobním údajům, jejich opravu nebo výmaz a právo
 vznést námitku proti určitému zpracování či požadovat jeho omezení. Chcete-li
-tato práva uplatnit, kontaktujte nás na adrese inbox@lowenware.com.
+tato práva uplatnit, kontaktujte nás na adrese
+[inbox@lowenware.com](mailto:inbox@lowenware.com).
 
 ## Soubory cookie a analytika
 
@@ -68,4 +70,4 @@ aktualizujeme.
 Toto prohlášení můžeme čas od času aktualizovat. Aktuální verze je vždy
 k dispozici na této stránce.
 
-_Poslední aktualizace: srpen 2026_
+Poslední aktualizace: srpen 2026

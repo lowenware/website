@@ -9,9 +9,10 @@ order: 30
 ## What we do
 
 When standard web development is not enough, we bring deep systems expertise.
-Our team maintains [Dotrix](/en/dotrix), an open-source Rust 3D engine, and applies that
-knowledge to client projects with demanding performance requirements. AI assists
-with profiling and analysis; the engineering decisions stay human-led.
+Our team maintains [Dotrix](/en/dotrix), an open-source Rust 3D engine, and
+applies that knowledge to client projects with demanding performance
+requirements. AI assists with profiling and analysis; the engineering decisions
+stay human-led.
 
 ## Typical engagements
 

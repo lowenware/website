@@ -11,9 +11,7 @@
   const { lang, product } = data;
   const canonical = absoluteUrl(`/${lang}/dotrix/`, origin);
   const alternates = buildAlternates('/dotrix/');
-  const imageSrc = $derived(
-    product.image ? getProductImageSrc('dotrix', product.image) : null
-  );
+  const imageSrc = $derived(product.image ? getProductImageSrc('dotrix', product.image) : null);
 </script>
 
 <SeoHead

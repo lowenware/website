@@ -1,6 +1,5 @@
 <script lang="ts">
   import SeoHead from '$lib/ui/toolkit/seo-head.svelte';
-  import Button from '$lib/ui/toolkit/button.svelte';
   import { _ } from '$lib/i18n';
   import { getProductImageSrc } from '$lib/shared/product-image';
   import { buildAlternates } from '$lib/shared/seo';
@@ -11,9 +10,7 @@
   const { lang, product } = data;
   const canonical = absoluteUrl(`/${lang}/mythstic/`, origin);
   const alternates = buildAlternates('/mythstic/');
-  const imageSrc = $derived(
-    product.image ? getProductImageSrc('mythstic', product.image) : null
-  );
+  const imageSrc = $derived(product.image ? getProductImageSrc('mythstic', product.image) : null);
 </script>
 
 <SeoHead

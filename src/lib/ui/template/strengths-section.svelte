@@ -29,7 +29,9 @@
       {/each}
     </div>
     <div class="section-cta">
-      <Button href="/{lang}/services/" variant="primary">{$_('section.strengths.ctaMoreAboutServices')}</Button>
+      <Button href="/{lang}/services/" variant="primary"
+        >{$_('section.strengths.ctaMoreAboutServices')}</Button
+      >
     </div>
   </div>
 </section>

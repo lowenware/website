@@ -1,4 +1,5 @@
 ---
+title: Kontakt
 company: 'Löwenware s.r.o.'
 email: 'inbox@lowenware.com'
 street: 'U Jezu 525/4'

@@ -12,7 +12,7 @@ import {
 import { blogConfig, homeConfig, type Locale } from '$lib/shared/defaults';
 import type { HeroData, Strength, CaseStudy } from '$lib/shared/markdown/types';
 import { loadMarkdownFile, listMarkdownFiles } from './loader';
-import { loadHero, loadStrengths, loadCaseStudies, loadTechnologies } from './pages';
+import { loadHero, loadStrengths, loadCaseStudies } from './pages';
 
 export type HomePageData = {
   hero: HeroData;

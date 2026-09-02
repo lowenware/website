@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { isValidLocale, supportedLanguages } from '$lib/shared/defaults';
+import { isValidLocale } from '$lib/shared/defaults';
 import { loadCommunityLinks, loadMarkdownFile } from '$lib/server/markdown';
 import type { LayoutServerLoad } from './$types';
 

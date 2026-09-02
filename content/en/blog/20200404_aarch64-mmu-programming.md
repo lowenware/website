@@ -214,10 +214,10 @@ change the behavior of MMU, so it is important to understand them all.
 
 9. AArch64 also provides 2 **Memory Attribute Indirection Registers
    ([MAIR](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0500d/B4BEIDGHFH.html))
-   for flexible configuration of memory areas. You can think about _MAIRs_ as of an
-   array with 8 elements each of 8 bits long. You can store inside _MAIRs_ up to 8
-   attributes sets and reffer them by the index 0..7 stored in `INDX` field of the
-   descriptor.
+   for flexible configuration of memory areas. You can think about _MAIRs_ as
+   of an array with 8 elements each of 8 bits long. You can store inside
+   _MAIRs_ up to 8 attributes sets and reffer them by the index 0..7 stored in
+   `INDX` field of the descriptor.
 
 ## Implementation Tips
 

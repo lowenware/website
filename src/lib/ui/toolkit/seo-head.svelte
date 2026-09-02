@@ -22,6 +22,13 @@
   }: Props = $props();
 
   const fullTitle = $derived(title.includes('Löwenware') ? title : `${title} | Löwenware`);
+
+  function jsonLdScriptTag(item: Record<string, unknown>): string {
+    const endScript = '</' + 'script>';
+    return `<script type="application/ld+json">${JSON.stringify(item)}${endScript}`;
+  }
+
+  const jsonLdItems = $derived(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : []);
 </script>
 
 <svelte:head>
@@ -58,10 +65,9 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={ogImage} />
   {/if}
-  {#if jsonLd}
-    {@const items = Array.isArray(jsonLd) ? jsonLd : [jsonLd]}
-    {#each items as item, i (i)}
-      {@html `<script type="application/ld+json">${JSON.stringify(item)}</script>`}
+  {#if jsonLdItems.length}
+    {#each jsonLdItems as item, i (i)}
+      {@html jsonLdScriptTag(item)}
     {/each}
   {/if}
 </svelte:head>
