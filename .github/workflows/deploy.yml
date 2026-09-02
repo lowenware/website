@@ -28,6 +28,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: npm
       - run: npm ci
+      - run: cp .env.example .env
       - run: npm run build
       - name: Upload
         run: rsync -avz ./build/ ${{ secrets.LOWENWARE_SSH_USER }}@${{ secrets.LOWENWARE_SSH_HOST }}:${{ vars.LOWENWARE_ROOT }}/${{ github.ref_name }}/
