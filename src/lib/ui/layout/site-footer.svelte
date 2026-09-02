@@ -30,7 +30,8 @@
     GitHub: 'logo-github.svg',
     Twitter: 'logo-twitter.svg',
     YouTube: 'logo-youtube.svg',
-    LinkedIn: 'logo-linkedin.svg'
+    LinkedIn: 'logo-linkedin.svg',
+    Discord: 'logo-discord.svg'
   };
 
   const navLinks = $derived([
