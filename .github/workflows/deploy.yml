@@ -3,6 +3,7 @@ name: Löwenware Website Deploy
 on:
   push:
     branches: [master, staging]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -29,4 +30,4 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Upload
-        run: rsync -avz ./build/ ${{ secrets.LOWENWARE_SSH_USER }}@${{ secrets.LOWENWARE_SSH_HOST }}:/srv/www/lowenware.com/
+        run: rsync -avz ./build/ ${{ secrets.LOWENWARE_SSH_USER }}@${{ secrets.LOWENWARE_SSH_HOST }}:${{ vars.LOWENWARE_ROOT }}/${{ github.ref_name }}/
