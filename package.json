@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@fontsource/jura": "^5.3.0",
-    "dompurify": "^3.2.5",
+    "dompurify": "^3.4.16",
     "gray-matter": "^4.0.3",
     "isomorphic-dompurify": "^2.23.0",
     "marked": "^15.0.8",
