@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { CaseStudy } from '$lib/shared/markdown/types';
+  import type { CaseStudy } from '#lib/shared/markdown/types.ts';
 
   type Props = {
     study: CaseStudy;

@@ -1,9 +1,9 @@
 <script lang="ts">
-  import SeoHead from '$lib/ui/toolkit/seo-head.svelte';
-  import { _ } from '$lib/i18n';
-  import { buildAlternates } from '$lib/shared/seo';
-  import { origin } from '$lib/shared/defaults';
-  import { absoluteUrl } from '$lib/shared/paths';
+  import SeoHead from '#lib/ui/toolkit/seo-head.svelte';
+  import { _ } from '#lib/i18n/index.ts';
+  import { buildAlternates } from '#lib/shared/seo.ts';
+  import { origin } from '#lib/shared/defaults.ts';
+  import { absoluteUrl } from '#lib/shared/paths.ts';
 
   let { data } = $props();
   const { lang, privacy } = $derived(data);

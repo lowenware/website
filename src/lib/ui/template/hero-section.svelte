@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { Locale } from '$lib/shared/defaults';
-  import type { HeroData } from '$lib/shared/markdown/types';
-  import Button from '$lib/ui/toolkit/button.svelte';
+  import type { Locale } from '#lib/shared/defaults.ts';
+  import type { HeroData } from '#lib/shared/markdown/types.ts';
+  import Button from '#lib/ui/toolkit/button.svelte';
 
   type Props = {
     lang: Locale;

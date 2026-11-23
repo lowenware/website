@@ -1,10 +1,10 @@
 <script lang="ts">
-  import type { Locale } from '$lib/shared/defaults';
-  import type { ProductCard } from '$lib/shared/markdown';
-  import Button from '$lib/ui/toolkit/button.svelte';
-  import { _ } from '$lib/i18n';
-  import { getProductBadge } from '$lib/shared/product-badge';
-  import { getProductImageSrc } from '$lib/shared/product-image';
+  import type { Locale } from '#lib/shared/defaults.ts';
+  import type { ProductCard } from '#lib/shared/markdown/index.ts';
+  import Button from '#lib/ui/toolkit/button.svelte';
+  import { _ } from '#lib/i18n/index.ts';
+  import { getProductBadge } from '#lib/shared/product-badge.ts';
+  import { getProductImageSrc } from '#lib/shared/product-image.ts';
 
   type Props = {
     lang: Locale;

@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { Locale } from '$lib/shared/defaults';
-  import type { Service } from '$lib/shared/markdown/types';
-  import { _ } from '$lib/i18n';
+  import type { Locale } from '#lib/shared/defaults.ts';
+  import type { Service } from '#lib/shared/markdown/types.ts';
+  import { _ } from '#lib/i18n/index.ts';
 
   type Props = {
     lang: Locale;
@@ -22,9 +22,9 @@
     <h2 class="service-title">{service.title}</h2>
     <p class="service-summary">{service.summary}</p>
     <p class="service-audience">
-      <span class="service-audience-label"
-        ><strong>{$_('section.services.audienceLabel')}</strong></span
-      >
+      <span class="service-audience-label">
+        <strong>{$_('section.services.audienceLabel')}</strong>
+      </span>
       {service.audience}
     </p>
     <div class="prose service-list">{@html service.html}</div>

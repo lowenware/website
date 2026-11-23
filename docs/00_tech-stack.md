@@ -137,7 +137,7 @@ Use a `generatePath(template, params)` helper to substitute dynamic segments.
 **Server handlers** (`+server.ts`) follow a consistent pipeline:
 
 1. Authenticate when required (session cookie / token)
-2. Validate input with Zod schemas from `$lib/api`
+2. Validate input with Zod schemas from `#lib/api/index.ts`
 3. Delegate to server-side services or data loaders
 4. Return `json(ok(data))` or a standardized error via `mapGenericError`
 
@@ -193,7 +193,7 @@ repositories/
 | `modals/`   | Modal system                    | `modal-container.svelte`, `confirm-modal.svelte` |
 | `utils/`    | Client helpers                  | `paths.ts`, `forms.ts`, toaster setup            |
 
-Each folder should have an `index.ts` barrel export. Import from `$lib/ui/toolkit`, `$lib/ui/template`, etc.
+Each folder should have an `index.ts` barrel export. Import from `#lib/ui/toolkit`, `$lib/ui/template`, etc.
 
 **Rule of thumb:** if it could ship in any app → `toolkit/`; if it references your domain → `template/` or `forms/`.
 
@@ -240,7 +240,7 @@ Skip this section for single-language apps.
 
 ### Initialization
 
-Root `+layout.ts` imports `$lib/i18n` and awaits `waitLocale()` before rendering.
+Root `+layout.ts` imports `#lib/i18n` and awaits `waitLocale()` before rendering.
 
 ### Key naming
 

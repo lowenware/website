@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { Locale } from '$lib/shared/defaults';
-  import type { Strength } from '$lib/shared/markdown/types';
-  import StrengthCard from '$lib/ui/template/strength-card.svelte';
-  import Button from '$lib/ui/toolkit/button.svelte';
-  import { _ } from '$lib/i18n';
+  import type { Locale } from '#lib/shared/defaults.ts';
+  import type { Strength } from '#lib/shared/markdown/types.ts';
+  import StrengthCard from '#lib/ui/template/strength-card.svelte';
+  import Button from '#lib/ui/toolkit/button.svelte';
+  import { _ } from '#lib/i18n/index.ts';
 
   type Props = {
     lang: Locale;
@@ -29,9 +29,9 @@
       {/each}
     </div>
     <div class="section-cta">
-      <Button href="/{lang}/services/" variant="primary"
-        >{$_('section.strengths.ctaMoreAboutServices')}</Button
-      >
+      <Button href="/{lang}/services/" variant="primary">
+        {$_('section.strengths.ctaMoreAboutServices')}
+      </Button>
     </div>
   </div>
 </section>

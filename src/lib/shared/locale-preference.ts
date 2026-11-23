@@ -1,5 +1,5 @@
-import { browser } from '$app/environment';
-import { defaultLanguage, isValidLocale, type Locale } from '$lib/shared/defaults';
+import { browser } from '$app/env';
+import { defaultLanguage, isValidLocale, type Locale } from '#lib/shared/defaults.ts';
 
 export const STORAGE_KEY = 'preferred-locale';
 

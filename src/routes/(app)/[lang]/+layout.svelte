@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { locale } from '$lib/i18n';
-  import SiteHeader from '$lib/ui/layout/site-header.svelte';
-  import SiteFooter from '$lib/ui/layout/site-footer.svelte';
+  import { locale } from '#lib/i18n/index.ts';
+  import SiteHeader from '#lib/ui/layout/site-header.svelte';
+  import SiteFooter from '#lib/ui/layout/site-footer.svelte';
 
   let { data, children } = $props();
 

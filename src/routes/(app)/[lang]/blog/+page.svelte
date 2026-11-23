@@ -1,5 +1,5 @@
 <script lang="ts">
-  import BlogListing from '$lib/ui/template/blog-listing.svelte';
+  import BlogListing from '#lib/ui/template/blog-listing.svelte';
 
   let { data } = $props();
 </script>
