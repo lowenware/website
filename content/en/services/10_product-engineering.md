@@ -1,27 +1,16 @@
 ---
-title: Product engineering and team extension
-summary: >-
-  Senior engineers embedded in your team or owning a defined delivery that will
-  cover a part or a full-stack development cycle.
+title: Software Development
+summary: Desktop, web, and mobile applications, APIs, and UI/UX from design to production.
+label: 01 · Software
+image: services/product-engineering.webp
+imageAlt: Software Development
+audience: companies that need senior hands without building an in-house team.
+cta: Send an inquiry
+ctaHref: /contact
 order: 10
 ---
 
-## What we do
-
-We join your existing team or take ownership of a scoped delivery. Our
-engineers work directly on your codebase, participate in your rituals, and
-ship working functionality every sprint. We are able to speed up and optimize
-our work with AI-augmented tooling while keeping high standards for review quality.
-
-## Typical engagements
-
-- Greenfield web or mobile applications
-- Feature development on existing products
-- API design and backend services
-- Frontend modernization and UX improvements
-
-## How we engage
-
-After a short discovery call, we agree on team composition, scope, and a first
-sprint. You evaluate our work at the end of that sprint before committing
-further.
+- New applications from scratch and modernization of existing products
+- AI-assisted development automation and output verification
+- System design, API, and user interface design
+- Code reviews, access and dependency management
