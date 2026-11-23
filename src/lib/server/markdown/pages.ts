@@ -86,6 +86,12 @@ export async function loadServices(lang: Locale): Promise<Service[]> {
         slug: name,
         title: meta.title,
         summary: meta.summary,
+        label: meta.label,
+        image: meta.image,
+        imageAlt: meta.imageAlt,
+        audience: meta.audience,
+        cta: meta.cta,
+        ctaHref: meta.ctaHref,
         body: loaded.body,
         html: loaded.html,
         order: meta.order ?? order
