@@ -1,16 +1,16 @@
 <script lang="ts">
-  import SeoHead from '$lib/ui/toolkit/seo-head.svelte';
-  import HeroSection from '$lib/ui/template/hero-section.svelte';
-  import StrengthsSection from '$lib/ui/template/strengths-section.svelte';
-  import FeaturedWorkSection from '$lib/ui/template/featured-work-section.svelte';
-  import IndependentSection from '$lib/ui/template/independent-section.svelte';
-  import ProductsSection from '$lib/ui/template/products-section.svelte';
-  import InsightsSection from '$lib/ui/template/insights-section.svelte';
-  import InquiryCtaSection from '$lib/ui/template/inquiry-cta-section.svelte';
-  import { _ } from '$lib/i18n';
-  import { buildAlternates, organizationJsonLd, webSiteJsonLd } from '$lib/shared/seo';
-  import { origin } from '$lib/shared/defaults';
-  import { absoluteUrl } from '$lib/shared/paths';
+  import SeoHead from '#lib/ui/toolkit/seo-head.svelte';
+  import HeroSection from '#lib/ui/template/hero-section.svelte';
+  import StrengthsSection from '#lib/ui/template/strengths-section.svelte';
+  import FeaturedWorkSection from '#lib/ui/template/featured-work-section.svelte';
+  import IndependentSection from '#lib/ui/template/independent-section.svelte';
+  import ProductsSection from '#lib/ui/template/products-section.svelte';
+  import InsightsSection from '#lib/ui/template/insights-section.svelte';
+  import InquiryCtaSection from '#lib/ui/template/inquiry-cta-section.svelte';
+  import { _ } from '#lib/i18n/index.ts';
+  import { buildAlternates, organizationJsonLd, webSiteJsonLd } from '#lib/shared/seo.ts';
+  import { origin } from '#lib/shared/defaults.ts';
+  import { absoluteUrl } from '#lib/shared/paths.ts';
 
   let { data } = $props();
   const { lang, home } = $derived(data);

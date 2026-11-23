@@ -3,7 +3,7 @@
 declare global {
   namespace App {
     interface Locals {
-      lang: import('$lib/shared/defaults').Locale;
+      lang: import('#lib/shared/defaults.ts').Locale;
     }
   }
 }

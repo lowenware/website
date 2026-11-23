@@ -5,15 +5,15 @@ import {
   StrengthFrontmatterSchema,
   TechnologyFrontmatterSchema,
   parseOrderPrefix
-} from '$lib/shared/markdown';
+} from '#lib/shared/markdown/index.ts';
 import type {
   CaseStudy,
   HeroData,
   Service,
   Strength,
   Technology
-} from '$lib/shared/markdown/types';
-import type { Locale } from '$lib/shared/defaults';
+} from '#lib/shared/markdown/types.ts';
+import type { Locale } from '#lib/shared/defaults.ts';
 import { loadMarkdownFile, listMarkdownFiles } from './loader';
 
 export async function loadHero(lang: Locale): Promise<HeroData> {

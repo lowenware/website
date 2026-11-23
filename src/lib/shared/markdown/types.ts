@@ -1,4 +1,4 @@
-import type { ProductBadge } from '$lib/shared/product-badge';
+import type { ProductBadge } from '#lib/shared/product-badge.ts';
 
 export type LoadedMarkdown<TMeta extends Record<string, unknown> = Record<string, unknown>> = {
   meta: TMeta;

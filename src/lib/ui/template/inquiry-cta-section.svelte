@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { Locale } from '$lib/shared/defaults';
-  import Button from '$lib/ui/toolkit/button.svelte';
-  import { _ } from '$lib/i18n';
+  import type { Locale } from '#lib/shared/defaults.ts';
+  import Button from '#lib/ui/toolkit/button.svelte';
+  import { _ } from '#lib/i18n/index.ts';
 
   type Props = {
     lang: Locale;

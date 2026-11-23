@@ -8,9 +8,9 @@ import {
   type BlogPostMeta,
   type ProductCard,
   type ProductPage
-} from '$lib/shared/markdown';
-import { blogConfig, homeConfig, type Locale } from '$lib/shared/defaults';
-import type { HeroData, Strength, CaseStudy } from '$lib/shared/markdown/types';
+} from '#lib/shared/markdown/index.ts';
+import { blogConfig, homeConfig, type Locale } from '#lib/shared/defaults.ts';
+import type { HeroData, Strength, CaseStudy } from '#lib/shared/markdown/types.ts';
 import { loadMarkdownFile, listMarkdownFiles } from './loader';
 import { loadHero, loadStrengths, loadCaseStudies } from './pages';
 

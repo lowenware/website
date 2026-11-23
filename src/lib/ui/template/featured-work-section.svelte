@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { Locale } from '$lib/shared/defaults';
-  import type { CaseStudy } from '$lib/shared/markdown/types';
-  import CaseStudyCard from '$lib/ui/template/case-study-card.svelte';
-  import Button from '$lib/ui/toolkit/button.svelte';
-  import { _ } from '$lib/i18n';
+  import type { Locale } from '#lib/shared/defaults.ts';
+  import type { CaseStudy } from '#lib/shared/markdown/types.ts';
+  import CaseStudyCard from '#lib/ui/template/case-study-card.svelte';
+  import Button from '#lib/ui/toolkit/button.svelte';
+  import { _ } from '#lib/i18n/index.ts';
 
   type Props = {
     lang: Locale;

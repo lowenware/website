@@ -1,11 +1,11 @@
 <script lang="ts">
-  import SeoHead from '$lib/ui/toolkit/seo-head.svelte';
-  import Button from '$lib/ui/toolkit/button.svelte';
-  import { _ } from '$lib/i18n';
-  import { getProductImageSrc } from '$lib/shared/product-image';
-  import { buildAlternates } from '$lib/shared/seo';
-  import { origin } from '$lib/shared/defaults';
-  import { absoluteUrl } from '$lib/shared/paths';
+  import SeoHead from '#lib/ui/toolkit/seo-head.svelte';
+  import Button from '#lib/ui/toolkit/button.svelte';
+  import { _ } from '#lib/i18n/index.ts';
+  import { getProductImageSrc } from '#lib/shared/product-image.ts';
+  import { buildAlternates } from '#lib/shared/seo.ts';
+  import { origin } from '#lib/shared/defaults.ts';
+  import { absoluteUrl } from '#lib/shared/paths.ts';
 
   let { data } = $props();
   const { lang, product } = data;
@@ -25,9 +25,9 @@
   <div class="container-wide">
     <article>
       <p class="product-back">
-        <a href="/{lang}/#products" class="text-sm text-blue-brand"
-          >← {$_('product.backToProducts')}</a
-        >
+        <a href="/{lang}/#products" class="text-sm text-blue-brand">
+          ← {$_('product.backToProducts')}
+        </a>
       </p>
       {#if imageSrc}
         <img src={imageSrc} alt="" class="product-image" loading="lazy" />
@@ -41,9 +41,9 @@
 
       <div class="product-actions">
         {#if product.externalHref}
-          <Button href={product.externalHref} variant="primary"
-            >{$_('product.visitMarketplace')}</Button
-          >
+          <Button href={product.externalHref} variant="primary">
+            {$_('product.visitMarketplace')}
+          </Button>
         {/if}
       </div>
     </article>
@@ -51,5 +51,5 @@
 </main>
 
 <style>
-  @import '$lib/ui/template/product-page.css';
+  @import '../../../../lib/ui/template/product-page.css';
 </style>

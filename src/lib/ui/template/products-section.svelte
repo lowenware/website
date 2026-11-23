@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { Locale } from '$lib/shared/defaults';
-  import type { ProductCard } from '$lib/shared/markdown/types';
-  import ProductCardComponent from '$lib/ui/template/product-card.svelte';
-  import { _ } from '$lib/i18n';
+  import type { Locale } from '#lib/shared/defaults.ts';
+  import type { ProductCard } from '#lib/shared/markdown/types.ts';
+  import ProductCardComponent from '#lib/ui/template/product-card.svelte';
+  import { _ } from '#lib/i18n/index.ts';
 
   type Props = {
     lang: Locale;

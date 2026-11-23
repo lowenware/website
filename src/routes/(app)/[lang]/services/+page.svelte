@@ -1,14 +1,14 @@
 <script lang="ts">
-  import SeoHead from '$lib/ui/toolkit/seo-head.svelte';
-  import PageHero from '$lib/ui/template/page-hero.svelte';
-  import ServiceCard from '$lib/ui/template/service-card.svelte';
-  import CaseStudyCard from '$lib/ui/template/case-study-card.svelte';
-  import TechnologiesSection from '$lib/ui/template/technologies-section.svelte';
-  import Button from '$lib/ui/toolkit/button.svelte';
-  import { _ } from '$lib/i18n';
-  import { buildAlternates } from '$lib/shared/seo';
-  import { origin } from '$lib/shared/defaults';
-  import { absoluteUrl } from '$lib/shared/paths';
+  import SeoHead from '#lib/ui/toolkit/seo-head.svelte';
+  import PageHero from '#lib/ui/template/page-hero.svelte';
+  import ServiceCard from '#lib/ui/template/service-card.svelte';
+  import CaseStudyCard from '#lib/ui/template/case-study-card.svelte';
+  import TechnologiesSection from '#lib/ui/template/technologies-section.svelte';
+  import Button from '#lib/ui/toolkit/button.svelte';
+  import { _ } from '#lib/i18n/index.ts';
+  import { buildAlternates } from '#lib/shared/seo.ts';
+  import { origin } from '#lib/shared/defaults.ts';
+  import { absoluteUrl } from '#lib/shared/paths.ts';
 
   let { data } = $props();
   const { lang, services, studies, technologies } = $derived(data);
@@ -92,7 +92,7 @@
 </main>
 
 <style>
-  @import '$lib/ui/template/home-section.css';
+  @import '../../../../lib/ui/template/home-section.css';
 
   .page {
     padding: 0;

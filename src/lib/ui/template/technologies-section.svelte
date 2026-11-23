@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { Technology } from '$lib/shared/markdown/types';
-  import { _ } from '$lib/i18n';
+  import type { Technology } from '#lib/shared/markdown/types.ts';
+  import { _ } from '#lib/i18n/index.ts';
 
   type Props = {
     technologies: Technology[];
