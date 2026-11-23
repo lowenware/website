@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { Locale } from '$lib/shared/defaults';
-  import type { BlogPostMeta } from '$lib/shared/markdown';
-  import { _ } from '$lib/i18n';
+  import type { Locale } from '#lib/shared/defaults.ts';
+  import type { BlogPostMeta } from '#lib/shared/markdown/index.ts';
+  import { _ } from '#lib/i18n/index.ts';
 
   type Props = {
     lang: Locale;

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import BlogTagListing from '$lib/ui/template/blog-tag-listing.svelte';
+  import BlogTagListing from '#lib/ui/template/blog-tag-listing.svelte';
 
   let { data } = $props();
 </script>

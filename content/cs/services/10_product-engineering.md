@@ -1,28 +1,16 @@
 ---
-title: Produktový vývoj a rozšíření týmu
-summary: >-
-  Seniorní vývojáři, kteří se začlení do vašeho týmu nebo převezmou odpovědnost
-  za jasně vymezenou dodávku pokrývající část či celý cyklus full-stack vývoje.
+title: Vývoj softwaru
+summary: Desktopové, webové a mobilní aplikace, API a UI/UX od návrhu po provoz.
+label: 01 · Software
+image: services/product-engineering.webp
+imageAlt: Vývoj softwaru
+audience: firmy, které potřebují seniorní ruce a nechtějí budovat vlastní tým.
+cta: Nezávazně poptat
+ctaHref: /contact
 order: 10
 ---
 
-## Co děláme
-
-Připojíme se k vašemu stávajícímu týmu, nebo převezmeme odpovědnost za jasně
-vymezenou dodávku. Naši vývojáři pracují přímo ve vaší kódové základně,
-účastní se zavedených týmových procesů a v každém sprintu dodávají funkční
-řešení. Nástroje s podporou AI nám umožňují práci zrychlit a zefektivnit,
-aniž bychom slevili z vysokých nároků na kvalitu revizí kódu.
-
-## Typické zakázky
-
-- Nové webové nebo mobilní aplikace vyvíjené od základu
-- Vývoj funkcí pro existující produkty
-- Návrh API a backendové služby
-- Modernizace frontendu a zlepšování UX
-
-## Jak spolupracujeme
-
-Po krátké úvodní konzultaci se dohodneme na složení týmu, rozsahu práce a prvním
-sprintu. Na jeho konci naši práci vyhodnotíte a teprve poté se rozhodnete, zda
-budete ve spolupráci pokračovat.
+- Nové aplikace od základu a modernizace stávajících produktů
+- Automatizace vývoje pomocí AI a verifikace výsledků
+- Systémový design, návrh API a uživatelského rozhraní
+- Revize kódu, správa přístupů a závislostí

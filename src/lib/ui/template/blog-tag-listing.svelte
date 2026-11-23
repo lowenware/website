@@ -1,12 +1,12 @@
 <script lang="ts">
-  import SeoHead from '$lib/ui/toolkit/seo-head.svelte';
-  import BlogCard from '$lib/ui/template/blog-card.svelte';
-  import { _ } from '$lib/i18n';
-  import { buildAlternates } from '$lib/shared/seo';
-  import { origin } from '$lib/shared/defaults';
-  import { absoluteUrl } from '$lib/shared/paths';
-  import type { BlogPostMeta } from '$lib/shared/markdown';
-  import type { Locale } from '$lib/shared/defaults';
+  import SeoHead from '#lib/ui/toolkit/seo-head.svelte';
+  import BlogCard from '#lib/ui/template/blog-card.svelte';
+  import { _ } from '#lib/i18n/index.ts';
+  import { buildAlternates } from '#lib/shared/seo.ts';
+  import { origin } from '#lib/shared/defaults.ts';
+  import { absoluteUrl } from '#lib/shared/paths.ts';
+  import type { BlogPostMeta } from '#lib/shared/markdown/index.ts';
+  import type { Locale } from '#lib/shared/defaults.ts';
 
   interface Props {
     lang: Locale;
@@ -38,8 +38,10 @@
       {#if currentPage > 1}
         <a
           href="/{lang}/blog/tags/{tag}/{currentPage === 2 ? '' : `${currentPage - 1}/`}"
-          class="btn btn-primary">←</a
+          class="btn btn-primary"
         >
+          ←
+        </a>
       {/if}
       <span class="pagination-status">{currentPage} / {totalPages}</span>
       {#if currentPage < totalPages}

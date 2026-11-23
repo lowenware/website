@@ -5,15 +5,15 @@ import {
   StrengthFrontmatterSchema,
   TechnologyFrontmatterSchema,
   parseOrderPrefix
-} from '$lib/shared/markdown';
+} from '#lib/shared/markdown/index.ts';
 import type {
   CaseStudy,
   HeroData,
   Service,
   Strength,
   Technology
-} from '$lib/shared/markdown/types';
-import type { Locale } from '$lib/shared/defaults';
+} from '#lib/shared/markdown/types.ts';
+import type { Locale } from '#lib/shared/defaults.ts';
 import { loadMarkdownFile, listMarkdownFiles } from './loader';
 
 export async function loadHero(lang: Locale): Promise<HeroData> {
@@ -86,6 +86,12 @@ export async function loadServices(lang: Locale): Promise<Service[]> {
         slug: name,
         title: meta.title,
         summary: meta.summary,
+        label: meta.label,
+        image: meta.image,
+        imageAlt: meta.imageAlt,
+        audience: meta.audience,
+        cta: meta.cta,
+        ctaHref: meta.ctaHref,
         body: loaded.body,
         html: loaded.html,
         order: meta.order ?? order

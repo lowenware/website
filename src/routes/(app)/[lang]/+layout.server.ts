@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
-import { isValidLocale } from '$lib/shared/defaults';
-import { loadCommunityLinks, loadMarkdownFile } from '$lib/server/markdown';
+import { isValidLocale } from '#lib/shared/defaults.ts';
+import { loadCommunityLinks, loadMarkdownFile } from '#lib/server/markdown/index.ts';
 import type { LayoutServerLoad } from './$types';
 
 export const load: LayoutServerLoad = async ({ params, locals }) => {

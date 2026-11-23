@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { page } from '$app/stores';
-  import { supportedLanguages, type Locale } from '$lib/shared/defaults';
-  import { savePreferredLocale } from '$lib/shared/locale-preference';
-  import { switchLocalePath } from '$lib/shared/paths';
+  import { page } from '$app/state';
+  import { supportedLanguages, type Locale } from '#lib/shared/defaults.ts';
+  import { savePreferredLocale } from '#lib/shared/locale-preference.ts';
+  import { switchLocalePath } from '#lib/shared/paths.ts';
 
   type Props = { lang: Locale };
   let { lang }: Props = $props();
@@ -10,11 +10,18 @@
 
 <nav aria-label="Language" class="lang-toggle">
   {#each supportedLanguages as code (code)}
-    {@const href = switchLocalePath($page.url.pathname, code)}
+    {@const href = switchLocalePath(page.url.pathname, code)}
     {#if code === lang}
       <span class="lang-current" aria-current="true">{code.toUpperCase()}</span>
     {:else}
-      <a class="lang-link" {href} onclick={() => savePreferredLocale(code)}>{code.toUpperCase()}</a>
+      <a
+        class="lang-link"
+        {href}
+        data-sveltekit-preload-data="off"
+        onclick={() => savePreferredLocale(code)}
+      >
+        {code.toUpperCase()}
+      </a>
     {/if}
     {#if code !== supportedLanguages[supportedLanguages.length - 1]}
       <span class="lang-separator" aria-hidden="true">|</span>

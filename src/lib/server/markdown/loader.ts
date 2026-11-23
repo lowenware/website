@@ -1,8 +1,13 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { contentExtension, contentRoot, defaultLanguage, type Locale } from '$lib/shared/defaults';
-import type { LoadedMarkdown } from '$lib/shared/markdown';
+import {
+  contentExtension,
+  contentRoot,
+  defaultLanguage,
+  type Locale
+} from '#lib/shared/defaults.ts';
+import type { LoadedMarkdown } from '#lib/shared/markdown/index.ts';
 import { parseMarkdown } from './parser';
 import { sanitizeHtml } from './sanitize';
 

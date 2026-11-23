@@ -1,4 +1,4 @@
-import type { Locale } from '$lib/shared/defaults';
+import type { Locale } from '#lib/shared/defaults.ts';
 
 export const HOME_PAGE = '/[lang]/';
 export const BLOG_PAGE = '/[lang]/blog/';

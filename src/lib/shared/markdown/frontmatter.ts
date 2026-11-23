@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { ProductBadgeSchema } from '$lib/shared/product-badge';
+import { ProductBadgeSchema } from '#lib/shared/product-badge.ts';
 
 export const LocaleSchema = z.enum(['en', 'cs']);
 export type Locale = z.infer<typeof LocaleSchema>;
@@ -71,6 +71,12 @@ export const StrengthFrontmatterSchema = z.object({
 export const ServiceFrontmatterSchema = z.object({
   title: z.string(),
   summary: z.string(),
+  label: z.string(),
+  image: z.string(),
+  imageAlt: z.string(),
+  audience: z.string(),
+  cta: z.string(),
+  ctaHref: z.string().optional().default('/contact'),
   order: z.coerce.number().optional()
 });
 

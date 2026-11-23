@@ -236,5 +236,5 @@ src/routes/
 - **Markdown pipeline**: raw file → gray-matter → marked → DOMPurify → `{@html}` in Svelte.
 - **Blog filenames** follow `YYYYMMDD_slug.md`; parsed by `parseBlogFilename()`.
 - **Product/tech ordering** uses numeric filename prefix (`10_`, `20_`) parsed by `parseOrderPrefix()`; overridable via frontmatter `order` field.
-- **Path constants** all live in `$lib/shared/paths.ts`; use `generatePath(template, params)` for substitution.
-- **JSON-LD** builders live in `$lib/shared/seo.ts`; used in `seo-head.svelte`.
+- **Path constants** all live in `#lib/shared/paths.ts`; use `generatePath(template, params)` for substitution.
+- **JSON-LD** builders live in `#lib/shared/seo.ts`; used in `seo-head.svelte`.

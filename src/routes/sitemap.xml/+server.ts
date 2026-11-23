@@ -1,6 +1,6 @@
-import { getAllBlogSlugs } from '$lib/server/markdown';
-import { origin, publishedLocales } from '$lib/shared/defaults';
-import { absoluteUrl } from '$lib/shared/paths';
+import { getAllBlogSlugs } from '#lib/server/markdown/index.ts';
+import { origin, publishedLocales } from '#lib/shared/defaults.ts';
+import { absoluteUrl } from '#lib/shared/paths.ts';
 
 export const prerender = true;
 

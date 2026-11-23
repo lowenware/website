@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Strength } from '$lib/shared/markdown/types';
+  import type { Strength } from '#lib/shared/markdown/types.ts';
 
   type Props = {
     strength: Strength;
