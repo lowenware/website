@@ -1,5 +1,5 @@
-import { origin, publishedLocales, type Locale } from '$lib/shared/defaults';
-import { absoluteUrl } from '$lib/shared/paths';
+import { origin, publishedLocales, type Locale } from '#lib/shared/defaults.ts';
+import { absoluteUrl } from '#lib/shared/paths.ts';
 
 export function buildAlternates(pathWithoutLang: string) {
   const normalized = pathWithoutLang.startsWith('/') ? pathWithoutLang : `/${pathWithoutLang}`;

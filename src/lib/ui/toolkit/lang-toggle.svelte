@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { page } from '$app/stores';
-  import { supportedLanguages, type Locale } from '$lib/shared/defaults';
-  import { savePreferredLocale } from '$lib/shared/locale-preference';
-  import { switchLocalePath } from '$lib/shared/paths';
+  import { page } from '$app/state';
+  import { supportedLanguages, type Locale } from '#lib/shared/defaults.ts';
+  import { savePreferredLocale } from '#lib/shared/locale-preference.ts';
+  import { switchLocalePath } from '#lib/shared/paths.ts';
 
   type Props = { lang: Locale };
   let { lang }: Props = $props();
@@ -10,7 +10,7 @@
 
 <nav aria-label="Language" class="lang-toggle">
   {#each supportedLanguages as code (code)}
-    {@const href = switchLocalePath($page.url.pathname, code)}
+    {@const href = switchLocalePath(page.url.pathname, code)}
     {#if code === lang}
       <span class="lang-current" aria-current="true">{code.toUpperCase()}</span>
     {:else}

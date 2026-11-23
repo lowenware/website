@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { Locale } from '$lib/shared/defaults';
-  import { _ } from '$lib/i18n';
+  import type { Locale } from '#lib/shared/defaults.ts';
+  import { _ } from '#lib/i18n/index.ts';
 
   type ContactInfo = {
     street: string;

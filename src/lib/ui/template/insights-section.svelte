@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { Locale } from '$lib/shared/defaults';
-  import type { BlogPostMeta } from '$lib/shared/markdown/types';
-  import BlogCard from '$lib/ui/template/blog-card.svelte';
-  import Button from '$lib/ui/toolkit/button.svelte';
-  import { _ } from '$lib/i18n';
+  import type { Locale } from '#lib/shared/defaults.ts';
+  import type { BlogPostMeta } from '#lib/shared/markdown/types.ts';
+  import BlogCard from '#lib/ui/template/blog-card.svelte';
+  import Button from '#lib/ui/toolkit/button.svelte';
+  import { _ } from '#lib/i18n/index.ts';
 
   type Props = {
     lang: Locale;

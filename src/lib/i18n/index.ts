@@ -1,6 +1,6 @@
 import { register, init, getLocaleFromNavigator } from 'svelte-i18n';
-import { browser } from '$app/environment';
-import { defaultLanguage, supportedLanguages } from '$lib/shared/defaults';
+import { browser } from '$app/env';
+import { defaultLanguage, supportedLanguages } from '#lib/shared/defaults.ts';
 
 const loaders: Record<string, () => Promise<{ default: Record<string, unknown> }>> = {
   en: () => import('../../lang/en.json'),

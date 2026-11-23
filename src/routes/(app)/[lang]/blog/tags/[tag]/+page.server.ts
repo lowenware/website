@@ -1,5 +1,5 @@
-import { getAllTags, loadBlogPostsByTag, paginatePosts } from '$lib/server/markdown';
-import { supportedLanguages, type Locale } from '$lib/shared/defaults';
+import { getAllTags, loadBlogPostsByTag, paginatePosts } from '#lib/server/markdown/index.ts';
+import { supportedLanguages, type Locale } from '#lib/shared/defaults.ts';
 import type { PageServerLoad } from './$types';
 
 function stripPostBody<

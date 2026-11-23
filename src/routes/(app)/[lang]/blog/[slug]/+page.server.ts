@@ -1,6 +1,11 @@
 import { error, redirect } from '@sveltejs/kit';
-import { getAllBlogSlugs, loadBlogPost, loadBlogPosts, paginatePosts } from '$lib/server/markdown';
-import { supportedLanguages, type Locale } from '$lib/shared/defaults';
+import {
+  getAllBlogSlugs,
+  loadBlogPost,
+  loadBlogPosts,
+  paginatePosts
+} from '#lib/server/markdown/index.ts';
+import { supportedLanguages, type Locale } from '#lib/shared/defaults.ts';
 import type { PageServerLoad } from './$types';
 
 function stripPostBody<

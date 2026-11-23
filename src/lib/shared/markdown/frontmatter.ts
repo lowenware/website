@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { ProductBadgeSchema } from '$lib/shared/product-badge';
+import { ProductBadgeSchema } from '#lib/shared/product-badge.ts';
 
 export const LocaleSchema = z.enum(['en', 'cs']);
 export type Locale = z.infer<typeof LocaleSchema>;
