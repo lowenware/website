@@ -14,7 +14,14 @@
     {#if code === lang}
       <span class="lang-current" aria-current="true">{code.toUpperCase()}</span>
     {:else}
-      <a class="lang-link" {href} onclick={() => savePreferredLocale(code)}>{code.toUpperCase()}</a>
+      <a
+        class="lang-link"
+        {href}
+        data-sveltekit-preload-data="off"
+        onclick={() => savePreferredLocale(code)}
+      >
+        {code.toUpperCase()}
+      </a>
     {/if}
     {#if code !== supportedLanguages[supportedLanguages.length - 1]}
       <span class="lang-separator" aria-hidden="true">|</span>
