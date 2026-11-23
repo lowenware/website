@@ -4,7 +4,7 @@ subtitle: >-
   Od webových platforem a propojených zařízení po Rust, grafiku a integrace IoT
   — Löwenware pomáhá produktovým týmům realizovat komplexní software a vracet
   problémové projekty na správnou cestu.
-image: slides/hero-4.png
+image: slides/hero-4.webp
 primaryCta: Probrat projekt
 primaryCtaHref: /contact
 secondaryCta: Co nabízíme

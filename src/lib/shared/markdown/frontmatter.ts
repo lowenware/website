@@ -71,6 +71,12 @@ export const StrengthFrontmatterSchema = z.object({
 export const ServiceFrontmatterSchema = z.object({
   title: z.string(),
   summary: z.string(),
+  label: z.string(),
+  image: z.string(),
+  imageAlt: z.string(),
+  audience: z.string(),
+  cta: z.string(),
+  ctaHref: z.string().optional().default('/contact'),
   order: z.coerce.number().optional()
 });
 

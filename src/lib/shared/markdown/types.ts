@@ -82,6 +82,12 @@ export type Service = {
   slug: string;
   title: string;
   summary: string;
+  label: string;
+  image: string;
+  imageAlt: string;
+  audience: string;
+  cta: string;
+  ctaHref: string;
   body: string;
   html: string;
   order: number;
