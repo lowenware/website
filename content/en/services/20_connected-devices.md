@@ -1,7 +1,7 @@
 ---
-title: Connected Devices
+title: Integration
 summary: Hardware integration with mobile and the cloud over network or radio.
-label: 02 · IoT
+label: 02 · Firmware
 image: services/connected-devices.webp
 imageAlt: Connected Devices
 audience: manufacturers of IoT devices, printers, and industrial and measuring equipment.
