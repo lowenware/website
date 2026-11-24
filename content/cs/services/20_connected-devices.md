@@ -1,7 +1,7 @@
 ---
-title: Připojená zařízení
+title: Integrace
 summary: Integrace hardwaru s telefonem i cloudem přes síť nebo rádio.
-label: 02 · IoT
+label: 02 · Firmware
 image: services/connected-devices.webp
 imageAlt: Připojená zařízení
 audience: výrobci IoT, tiskáren, průmyslových a měřicích zařízení.
